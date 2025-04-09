@@ -1,0 +1,16 @@
+{
+    "name": "easy-words-learning",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "parcel build src/*.js --no-source-maps"
+    },
+    "dependencies": {
+        "core-js": "^3.41.0",
+        "dotenv": "^8.2.0",
+        "request-promise-native": "^1.0.9",
+        "uuid": "^11.1.0"
+    },
+    "devDependencies": {
+        "parcel": "^2.14.4"
+    }
+}

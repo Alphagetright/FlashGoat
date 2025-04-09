@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Easy Words Learning",
+    "version": "1.0",
+    "description": "A tool for learning English words from web pages and video subtitles",
+    "permissions": [
+      "storage",
+      "scripting",
+      "tabs"
+    ],
+    "host_permissions": [
+      "https://www.dictionaryapi.com/*",
+      "https://api.mymemory.translated.net/*",
+      "https://api.ocr.space/*",
+      "https://*.ocr.space/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [{
+      "resources": ["data/words.json"],
+      "matches": ["<all_urls>"]
+    }],
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+}
